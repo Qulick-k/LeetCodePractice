@@ -35,7 +35,7 @@ public class Solution {
     }
     public string GcdOfStrings(string str1, string str2) 
     {
-        //str1 + str2 != str2 + str1 代表兩組有公因數字串，反之則沒有，即""
+        //當str1 + str2 == str2 + str1 代表兩組有公因數字串，反之則沒有，即""
         if(str1 + str2 != str2 + str1)
         {
             return "";
