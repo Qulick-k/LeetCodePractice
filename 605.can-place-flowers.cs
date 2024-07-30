@@ -8,6 +8,24 @@
 public class Solution {
     public bool CanPlaceFlowers(int[] flowerbed, int n) 
     {
+        //另外一個更直觀的作法，並且使用ElementAtOrDefault來避免超出array的index範圍
+        for(int i = 0; i < flowerbed.Length; i++)
+        {
+            if (flowerbed[i] == 0
+                && flowerbed.ElementAtOrDefault(i - 1) == 0
+                && flowerbed.ElementAtOrDefault(i + 1) == 0)
+            {
+                flowerbed[i] = 1;
+                n--;
+            }
+        }
+
+        return n <= 0;
+    }
+}
+// @lc code=end
+
+/*  自己想的
         bool temp_bool = true;
         bool temp_While = true;
         int temp_Num = 0;        
@@ -66,7 +84,4 @@ public class Solution {
         }
         
         return temp_bool;
-    }
-}
-// @lc code=end
-
+*/
