@@ -21,7 +21,7 @@ public class Solution {
         接著算3st K-Subarray =  51   +   3    -  12。 2st K-Subarray的51和3st K-Subarray的42比較取最大值，並重新賦予最大值給Max_Average，仍然還是51比較大
         最後迴圈只跑2次，i就從到達6了，因此跳出迴圈。並回傳Max_Average / k作為解答。
 
-        在C#的寫法，Max_Average和Temp_Average記得宣告為浮點數值型別
+        在C#的寫法，Max_Average和Temp_Average記得宣告為浮點數值型別 double
         */
         double Max_Average = 0;
         double Temp_Average = 0;
