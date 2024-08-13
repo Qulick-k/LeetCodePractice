@@ -35,3 +35,26 @@ public class Solution {
 }
 // @lc code=end
 
+/*
+//網友給的超直觀解法
+        int prevWindow = 0;
+        int currWindow = 0;
+        int max_length = 0;
+        
+        for (int i = 0; i < nums.Length; i++) {
+            if (nums[i] == 0) {
+                max_length = Math.Max(max_length, prevWindow + currWindow);
+                prevWindow = currWindow;
+                currWindow = 0;
+            } else {
+                currWindow++;
+            }
+        }
+
+        if (currWindow == nums.Length) {
+            return currWindow - 1;
+        }
+
+        max_length = Math.Max(max_length, prevWindow + currWindow);
+        return max_length;
+*/
