@@ -47,3 +47,20 @@ public class Solution {
 }
 // @lc code=end
 
+/*
+        //網友分享的解法，使用Dictionary和HashSet，解題概念基本上一樣，但是寫法簡潔很多
+        Dictionary<int,int> frequency = new Dictionary<int, int>();
+
+        foreach(int num in arr) // Store element and its frequency
+            frequency[num] = frequency.ContainsKey(num) ? frequency[num]+1 : 1;
+
+        // store the frequency 
+        HashSet<int> storage = new HashSet<int>();
+        foreach(var key in frequency)
+            // Return false if same frequency occurs twice
+            if(storage.Contains(key.Value)) return false;
+            else storage.Add(key.Value);
+
+        // True if we get n different frequency for n different numbers
+        return true;
+*/
