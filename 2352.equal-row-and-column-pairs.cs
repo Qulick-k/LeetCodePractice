@@ -8,6 +8,50 @@
 public class Solution {
     public int EqualPairs(int[][] grid)
     {
+        int count = 0;
+        
+        // Create a dictionary to store rows of the grid
+        Dictionary<string, int> row = new Dictionary<string, int>();
+        
+        // Iterate over each row in the grid
+        for (int i = 0; i < grid.Length; i++) {
+            // Convert the row to a string key
+            string key = string.Join(",", grid[i]);
+            
+            // If the key is not in the dictionary, add it
+            if (!row.ContainsKey(key)) {
+                row.Add(key, 1);
+            }
+            // If the key is already in the dictionary, increment its count
+            else {
+                row[key]++;
+            }
+        }
+        
+        // Iterate over each column in the grid
+        for (int i = 0; i < grid[0].Length; i++) {
+            // Create an array to store the column
+            int[] column = new int[grid.Length];
+            
+            // Populate the column array with values from the grid
+            for (int j = 0; j < grid.Length; j++) {
+                column[j] = grid[j][i];
+            }
+            
+            // Convert the column to a string key
+            string columnKey = string.Join(",", column);
+            
+            // If the column key is in the row dictionary, increment the count by the value associated with the key
+            if (row.ContainsKey(columnKey)) {
+                count += row[columnKey];
+            }
+        }
+        
+        return count;
+    }
+}
+// @lc code=end
+/*
         Dictionary<string, int> row_map = new Dictionary<string, int>(); //設置Dictionary，row和column
         Dictionary<string, int> col_map = new Dictionary<string, int>();
         int count = 0;
@@ -68,10 +112,7 @@ public class Solution {
             }
         }
         return count;
-    }
-}
-// @lc code=end
-
+*/
 /*
         //網友寫得比較好懂得寫法，但是也只有60% 53%
         int n = grid.Length;
