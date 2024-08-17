@@ -57,3 +57,11 @@ public class Solution {
 }
 // @lc code=end
 
+/*
+Queue
+https://learn.microsoft.com/zh-tw/dotnet/api/system.collections.generic.queue-1?view=net-8.0
+Queue.Enqueue
+https://learn.microsoft.com/zh-tw/dotnet/api/system.collections.generic.queue-1.enqueue?view=net-8.0#system-collections-generic-queue-1-enqueue(-0)
+Queue.Dequeue
+https://learn.microsoft.com/zh-tw/dotnet/api/system.collections.generic.queue-1.dequeue?view=net-8.0#system-collections-generic-queue-1-dequeue
+*/
