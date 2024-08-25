@@ -92,7 +92,7 @@ public class Solution {
     */
 }
 // @lc code=end
-
+//https://blog.csdn.net/fuxuemingzhu/article/details/106597991
 /*蓋牌重寫
         List<List<(int sign, int destination)>> adjust_List = new(n);
         int count = 0;
