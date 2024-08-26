@@ -54,7 +54,7 @@ public class Solution {
                 continue;
             }
 
-            //              DFS_Divide(graph,      "A",      "C", 1, visited);      ***從第一次DFSDFS_Divide返回CalcEquation，回傳了6.0 給result*** 
+            //              DFS_Divide(graph,      "A",      "C", 1, visited);進遞迴。      ***從第一次DFSDFS_Divide返回CalcEquation，回傳了6.0 給result*** 
             double result = DFS_Divide(graph, query[0], query[1], 1, visited);
 
             //answer串列新增result == 6.0
@@ -186,6 +186,8 @@ public class Solution {
 /*
 Dictionary.TryAdd
 https://learn.microsoft.com/zh-tw/dotnet/api/system.collections.generic.dictionary-2.tryadd?view=net-8.0#system-collections-generic-dictionary-2-tryadd(-0-1)
+題目解析
+https://www.youtube.com/watch?v=UwpvInpgFmo
 */
 
 /*
