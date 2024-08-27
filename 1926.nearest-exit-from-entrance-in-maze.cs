@@ -9,7 +9,6 @@ public class Solution {
     public int NearestExit(char[][] maze, int[] entrance)
     {
         //graph / BFS
-
         ///以entrance = [1,2]為例
         //設置queue
         Queue<int[]> BFS_queue = new Queue<int[]>();
@@ -74,8 +73,55 @@ public class Solution {
         }
 
         //跑完判斷不出來，代表沒出口，回傳-1
-        return -1;    
+        return -1;
     }
 }
 // @lc code=end
 
+/*蓋牌重打
+        //蓋牌重打
+        Queue<int[]> BFS_Queue = new Queue<int[]>();
+        int step = 0;
+        int[][] offsets = new int[][]
+        { 
+            new int[] { -1, 0 }, new int[] { 1, 0 },
+            new int[] { 0, -1 }, new int[] { 0, 1 } 
+        };
+
+        BFS_Queue.Enqueue(entrance);
+        maze[entrance[0]][entrance[1]] = '*';
+
+        while(BFS_Queue.Count > 0)
+        {
+            step++;
+            int Queue_Count = BFS_Queue.Count;
+            //進for迴圈，把Queue的數值Dequeue出來給thisPoint
+            for(int num = 0; num < Queue_Count; num++)
+            {
+                int[] thisPoint = BFS_Queue.Dequeue();
+                int row = thisPoint[0];
+                int col = thisPoint[1];
+
+                for(int i = 0; i < offsets.Length; i++)
+                {
+                    int newRow = row + offsets[i][0];
+                    int newCol = col + offsets[i][1];
+
+                    if( newRow >= 0 && newRow < maze.Length &&
+                        newCol >= 0 && newCol < maze[newRow].Length &&
+                        maze[newRow][newCol] == '.' )
+                    {
+                        if( newRow == 0 || newRow == maze.Length-1 ||
+                            newCol == 0 || newCol == maze[newRow].Length-1)
+                        {
+                            return step;
+                        }
+
+                        maze[newRow][newCol] = '*';
+                        BFS_Queue.Enqueue( new int[] { newRow, newCol});
+                    }
+                }
+            }
+        }
+        return -1;
+*/
