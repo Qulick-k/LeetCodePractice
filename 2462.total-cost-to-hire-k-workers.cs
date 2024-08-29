@@ -8,6 +8,7 @@
 public class Solution {
     public long TotalCost(int[] costs, int k, int candidates)
     {
+        //Heap / PriorityQueue
         //設置前和後PriorityQueue
         PriorityQueue<int, int> pre_Queue = new PriorityQueue<int, int>();
         PriorityQueue<int, int> pos_Queue = new PriorityQueue<int, int>();
