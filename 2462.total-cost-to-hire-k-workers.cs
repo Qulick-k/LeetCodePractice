@@ -35,7 +35,7 @@ public class Solution {
                 pos_Queue.Enqueue(costs[posIndex], costs[posIndex]);
                 posIndex--;
             }
-
+            
             //設置前和後的工資費，都先設在最大值
             int preCost = int.MaxValue;
             int posCost = int.MaxValue;
@@ -50,6 +50,10 @@ public class Solution {
             {
                 posCost = pos_Queue.Peek();
             }
+            /*以上程式碼，等於下面兩行程式碼
+            int preCost = pre_Queue.Count > 0 ? pre_Queue.Peek() : int.MaxValue;
+            int posCost = pos_Queue.Count > 0 ? pos_Queue.Peek() : int.MaxValue;
+            */
 
             //如果preCost工資費比posCost工資費便宜，或是相同，那就選擇preCost工資費
             if(preCost <= posCost)
