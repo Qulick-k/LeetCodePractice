@@ -8,6 +8,7 @@
 public class Solution {
     public int[] SuccessfulPairs(int[] spells, int[] potions, long success)
     {
+        //使用Binary Search
         //potions_sort 由小排到大 [ 5 6 7 8 9 ] ，success = 7
         Array.Sort(potions);
         int n = potions.Length;
