@@ -51,6 +51,32 @@ public class Solution {
 https://medium.com/@cindy20303705/790-domino-and-tromino-tiling-%E8%A7%A3%E6%B3%95-43006c33867c
 */
 
+/*效率最高的寫法
+public class Solution {
+    const long MODULO = 1000000007; //因為迴圈到後期，計算的數值會過於龐大，所以會使用MOD = 1000000007 取餘數，避免計算數值太大，導致溢位。
+    public int NumTilings(int n)
+    {
+        //
+        //設置long陣列，長度設為n+3，因為先
+        long[] dp = new long[n+3];
+        dp[0] = 0;
+        dp[1] = 1;
+        dp[2] = 2;
+        dp[3] = 5;
+
+        //從第4個索引開始
+        for (int i = 4; i <= n; i++)  //假設n=5
+        {                    
+            //當i=4。dp[4]= (2 * 5 + 1) == 11
+            //當i=5。dp[5]= (2 * 11 + 2) == 24
+            dp[i] = (2 * dp[i-1] + dp[i-3]) % MODULO;
+        }
+        //dp[n]先取餘數，再用(int)轉成整數
+        return (int)(dp[n] % MODULO);
+    }
+}
+*/
+
 /*典型的 DP 問題，基於之前的計算結果取得新的結果
 https://kevinchung0921.medium.com/leetcode-%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84-790-domino-and-tromino-tiling-7c36f7a3ac1b
 */
