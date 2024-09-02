@@ -33,3 +33,6 @@ public class Solution {
 }
 // @lc code=end
 
+/*原理參考
+https://ics.uci.edu/~eppstein/161/960229.html
+*/
