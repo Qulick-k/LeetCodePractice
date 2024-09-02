@@ -27,9 +27,9 @@ public class Solution {
             prefixSum = (prefixSum + dp[i-3]) % MODULO;
                         //自己獨有的2種排法
                         ////  |                      
-            //當i=4。dp[4]= ( 2 + 2 + 5 + 1*2 ) == 11
-            //當i=5。dp[5]= ( 2 + 5 + 11 + 3*2 ) == 24
-            dp[i] = (2 + dp[i-2] + dp[i-1] + prefixSum * 2 )  % MODULO;
+            //當i=4。dp[4]= ( 2 + 5 + 1*2 + 2) == 11
+            //當i=5。dp[5]= ( 5 + 11 + 3*2 + 2) == 24
+            dp[i] = (dp[i-2] + dp[i-1] + prefixSum * 2 + 2)  % MODULO;
         }
         //dp[n]先取餘數，再用(int)轉成整數
         return (int)(dp[n] % MODULO);
