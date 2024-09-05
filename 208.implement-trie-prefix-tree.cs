@@ -8,7 +8,7 @@
 public class TrieNode
 {
 /*使用Trie
-先多設置一個TrieNode class，給予一個長度為總英文字母數量的陣列，還有一個判斷是否為單字的布林值，作為指針的引用
+先多設置一個TrieNode class，給予一個長度為總英文字母數量的陣列，還有一個判斷是否為單字的布林值，作為指標的引用
 */
     public TrieNode[] Children = new TrieNode[26];
     public bool isWord;
