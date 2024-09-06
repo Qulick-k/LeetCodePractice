@@ -19,7 +19,7 @@ public class Solution {
     }
 
     public IList<IList<string>> result = new List<IList<string>>();
-    
+
     public IList<IList<string>> SuggestedProducts(string[] products, string searchWord)
     {
         //使用Trie
@@ -88,5 +88,5 @@ public class Solution {
 // @lc code=end
 
 /*圖文解說
-
+https://youtu.be/ERVuqYCJXl0?si=852duMGINYl4mfp6
 */
