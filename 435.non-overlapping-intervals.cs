@@ -8,7 +8,7 @@
 public class Solution {
     public int EraseOverlapIntervals(int[][] intervals)
     {
-        //使用Interval，演算法使用貪婪法
+        //使用Interval，使用貪婪法
         
         //對Interval排序，使用二維升冪
         Array.Sort(intervals, (x, y) => x[0] - y[0]);
