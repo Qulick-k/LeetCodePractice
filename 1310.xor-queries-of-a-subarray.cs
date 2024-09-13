@@ -10,7 +10,7 @@ public class Solution {
     {
         //使用位元運算，還有prefix Sum    
         //範例arr=[1,3,4,8]
-        //prefixsum後的prefix_sum=[0,1,2,5,13]
+        //prefixsum後的prefix_sum=[0,1,2,6,14]
         int[] prefix_sum = new int[arr.Length+1];
         prefix_sum[0] = 0;
         for (int i = 0; i < arr.Length; i++)
