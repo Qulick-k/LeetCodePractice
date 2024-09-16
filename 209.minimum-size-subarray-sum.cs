@@ -36,6 +36,8 @@ public class Solution {
         }
         return min == int.MaxValue ? 0 : min;
     }
+    //https://youtu.be/jp15K7dTCHc?si=5DzADC44YIbk_WVd 中文
+    //https://youtu.be/aYqYMIqZx5s?si=R7A3Zlz9IF7Qv4lA 英文
 }
 // @lc code=end
 /* 60 83
