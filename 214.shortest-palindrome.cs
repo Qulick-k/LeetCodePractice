@@ -45,7 +45,7 @@ public class Solution {
         return reverse_string.Substring(0, (s.Length - partial_Table [Leng.Length - 1]) ) + s;
     }
 }
-
+//KMP參考 https://youtu.be/c4akpqTwE5g?si=H_c6hx0tpYhpLqn1
 // @lc code=end
 /*初次嘗試 50 / 123 cases passed
         List<char> s_List = s.ToList();
