@@ -25,12 +25,13 @@ public class Solution {
         for (int i = 1; i < Leng.Length; i++)
         {
             //更新前綴邊界
-            int j = partial_Table [i-1]; //第一輪 j = 0
-
+            int j = partial_Table [i-1]; //第一輪 j = 0            
+            
             //回到最後一次
             while (j > 0 && (Leng[i] != Leng[j]))  //只要j大於0，並且[i]字元跟[j]字元不相同
             {             
                 j = partial_Table [j-1];
+                Console.WriteLine(i);
             }
 
             //如果[i]字元跟[j]字元相同
