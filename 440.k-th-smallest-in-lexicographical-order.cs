@@ -8,7 +8,7 @@
 public class Solution {
     public int FindKthNumber(int n, int k)
     {
-        //
+        // 
         int cur = 1;
         int i = 1;
 
