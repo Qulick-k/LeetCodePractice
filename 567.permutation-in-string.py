@@ -34,6 +34,7 @@ class Solution:
             if s1count == s2count:
                 return True 
         return False
+#參考https://youtu.be/wpq03MmEHIM?si=1VJ8g6ZKijEbxOWW
 # @lc code=end
 
         """
