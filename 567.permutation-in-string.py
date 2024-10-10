@@ -7,6 +7,7 @@
 # @lc code=start
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
+        #練習sliding window和簡易hash table
         #如果字串1長度，比字串2長，代表不可能當字串2的子陣列
         if len(s1)> len(s2):
             return False
