@@ -9,7 +9,9 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        #使用set，等同於C#的hashset，如果長度相同，代表沒重複
+        # 使用set，如果長度相同，代表沒重複
+        # 等同於C#中List<int> nums = new List<int>{1,2,3,1};
+        # HashSet<int> _set = new HashSet<int>(nums);
         _set = set(nums)
 
         if len(nums) == len(_set):
