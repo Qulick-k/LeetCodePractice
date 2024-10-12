@@ -8,7 +8,7 @@
 from typing import List
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        #練習two pointer DP
+        #練習Sliding Window two pointer DP
         left = 0
         right = 1
         res = 0
