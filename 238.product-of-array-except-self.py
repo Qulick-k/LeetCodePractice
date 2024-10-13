@@ -9,6 +9,7 @@ from typing import List
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         #複習two pointer
+        #分成abc三個部分，left代表c，right代表a
         left_sum = 1
         right_sum = 1
         res = [0] * len(nums)
