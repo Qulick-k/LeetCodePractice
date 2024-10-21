@@ -7,6 +7,13 @@
 # @lc code=start
 class Solution:
     def hammingWeight(self, n: int) -> int:
+        #使用&位元運算
+        res = 0
+        while (n != 0):
+            n = n & (n - 1)
+            res += 1
+        return res
+'''
         #練習位元運算嗎? 注意餘數和除數的語法，小心踩坑python的/和//差別
         res = 0        
         while n != 0:
@@ -16,5 +23,6 @@ class Solution:
                 res += 1
             n = n // 2
         return res
+'''
 # @lc code=end
 
