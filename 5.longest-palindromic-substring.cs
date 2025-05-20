@@ -20,7 +20,6 @@ public class Solution
             FindPalidrome(s, i, i + 1, ref start, ref maxlen);
         }
         return s.Substring(start, maxlen);
-
     }
 
     //找迴文，並且更新迴文起始字元的指標，以及最長迴文長度
